@@ -15,8 +15,9 @@ def ranges(i):
 for i in content:
     #Breaking down octects
     extractions = re.match("(\d{0,3}\.\d{0,3}\.\d{0,3})\.(\d{0,3})",i)
-    network, host = extractions.groups()
-    host = int(host)
+    if extractions:
+        network, host = extractions.groups()
+        host = int(host)
 
     if network not in ip_list:
         ip_list[network] = [host]
@@ -35,6 +36,6 @@ for k, v in ip_list.items():
         else:
             final_list.append(str(k)+"."+r[0]+"-"+str(k)+"."+r[1])
 
-#Printing the final list
+#Prints the final list
 print("Arranged IPs:\n"+", ".join(final_list))
     
