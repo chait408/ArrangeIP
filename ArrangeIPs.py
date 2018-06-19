@@ -14,7 +14,7 @@ def ranges(i):
 
 for i in content:
     #Breaking down octects
-    extractions = re.match("(\d{0,3}\.\d{0,3}\.\d{0,3})\.(\d{0,3})",i)
+    extractions = re.match("(\d{1,3}\.\d{1,3}\.\d{1,3})\.(\d{1,3})",i)
     if extractions:
         network, host = extractions.groups()
         host = int(host)
