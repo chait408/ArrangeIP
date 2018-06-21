@@ -1,7 +1,14 @@
 import itertools
 import re
+import argparse
+                                               
+#Argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("--input", "-i", type=str, required=True)
+args = parser.parse_args()
+file_input = args.input
 
-with open("ip.txt",'r') as f:
+with open(file_input,'r') as f:
     content = f.readlines()
 ip_list = {}
 final_list = []
