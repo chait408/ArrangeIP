@@ -44,5 +44,9 @@ for k, v in ip_list.items():
             final_list.append(str(k)+"."+r[0]+"-"+str(k)+"."+r[1])
 
 #Prints the final list
-print("Arranged IPs:\n"+", ".join(final_list))
+new_list = []
+for i in final_list:
+    if i not in new_list:
+        new_list.append(i)
+print("Arranged IPs:\n"+", ".join(new_list))
     
