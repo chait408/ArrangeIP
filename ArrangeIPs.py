@@ -43,7 +43,7 @@ for k, v in ip_list.items():
         else:
             final_list.append(str(k)+"."+r[0]+"-"+str(k)+"."+r[1])
 
-#Prints the final list
+#Removes the duplicates and prints the final list
 new_list = []
 for i in final_list:
     if i not in new_list:
