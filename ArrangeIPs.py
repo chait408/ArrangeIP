@@ -1,7 +1,8 @@
+from __future__ import print_function
 import itertools
 import re
 import argparse
-                                               
+
 #Argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--input", "-i", type=str, required=True)
@@ -48,5 +49,5 @@ new_list = []
 for i in final_list:
     if i not in new_list:
         new_list.append(i)
-print("Arranged IPs:\n"+", ".join(new_list))
+print("Arranged IPs: ", *new_list, sep='\n')
     
